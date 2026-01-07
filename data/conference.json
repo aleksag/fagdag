@@ -1,0 +1,60 @@
+{
+  "tracks": [
+    {
+      "id": "track1",
+      "name": "Spor 1"
+    },
+    {
+      "id": "track2",
+      "name": "Spor 2"
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot3",
+      "startTime": "11:15",
+      "endTime": "12:00",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess4",
+          "trackId": "track1",
+          "title": "Advanced TypeScript",
+          "speaker": "Alice Johnson",
+          "description": "Tips and tricks for power users."
+        },
+        {
+          "id": "sess5",
+          "trackId": "track2",
+          "title": "Design Systems at Scale",
+          "speaker": "Bob Wilson",
+          "description": "Building consistent UI across teams."
+        }
+      ]
+    },
+    {
+      "id": "slot4",
+      "startTime": "12:00",
+      "endTime": "13:00",
+      "type": "break",
+      "sessions": [
+        {
+          "id": "sess_lunch",
+          "trackId": "all",
+          "title": "Lunch Break",
+          "speaker": "",
+          "description": "Buffet lunch served in the cafeteria."
+        }
+      ]
+    }
+  ],
+  "feedback": [
+    {
+      "id": "1767809407570",
+      "sessionId": "sess1",
+      "rating": 5,
+      "comment": "Great!",
+      "createdAt": "2026-01-07T18:10:07.570Z"
+    }
+  ]
+}
