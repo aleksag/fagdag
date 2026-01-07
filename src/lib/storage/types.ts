@@ -9,6 +9,7 @@ export interface Session {
     title: string;
     speaker: string;
     description: string;
+    rowSpan?: number;
 }
 
 export interface Slot {

@@ -11,50 +11,317 @@
   ],
   "slots": [
     {
-      "id": "slot3",
-      "startTime": "11:15",
-      "endTime": "12:00",
-      "type": "parallel",
+      "id": "slot_3",
+      "startTime": "12:00",
+      "endTime": "12:20",
+      "type": "common",
       "sessions": [
         {
-          "id": "sess4",
-          "trackId": "track1",
-          "title": "Advanced TypeScript",
-          "speaker": "Alice Johnson",
-          "description": "Tips and tricks for power users."
-        },
-        {
-          "id": "sess5",
-          "trackId": "track2",
-          "title": "Design Systems at Scale",
-          "speaker": "Bob Wilson",
-          "description": "Building consistent UI across teams."
+          "id": "sess_t1_3",
+          "trackId": "all",
+          "title": "Velkommen til fagdag ✨",
+          "speaker": "",
+          "description": ""
         }
       ]
     },
     {
-      "id": "slot4",
-      "startTime": "12:00",
+      "id": "slot_4",
+      "startTime": "12:20",
+      "endTime": "12:50",
+      "type": "common",
+      "sessions": [
+        {
+          "id": "sess_t1_4",
+          "trackId": "all",
+          "title": "Åpningsforedrag",
+          "speaker": "Håvard Bjurholt",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "slot_5",
+      "startTime": "12:50",
       "endTime": "13:00",
       "type": "break",
       "sessions": [
         {
-          "id": "sess_lunch",
+          "id": "sess_t1_5",
           "trackId": "all",
-          "title": "Lunch Break",
+          "title": "PAUSE",
+          "speaker": "PAUSE",
+          "description": "PAUSE"
+        }
+      ]
+    },
+    {
+      "id": "slot_6",
+      "startTime": "13:00",
+      "endTime": "13:25",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess_t1_6",
+          "trackId": "track1",
+          "title": "Ta kontroll over KI",
+          "speaker": "Cecilie Haugstvedt",
+          "description": "Slik gjør vi KI til en produktiv kollega: med konkrete tips, \r\nvaner og rutiner for trygg og kvalitetsfremmende bruk av KI i teamet, s\r\nom hjelper utviklere, testere og forretning å samarbeide bedre og unngå vanlige fallgruver"
+        },
+        {
+          "id": "sess_t2_6",
+          "trackId": "track2",
+          "title": "Nesten katastrofe på 17. Mai",
+          "speaker": "Embrik Tvenge Einang",
+          "description": "Vi i Team Balanse på Statnett er ansvarlige for utregningen av det som er ACE OL - sanntidsubalansen i nettet. Før 17. Mai hadde vi en endring i et bibliotek som resulterte i utilsiktede endringer i utregningen. Ønsker å fortelle litt om hva som skjedde, hvordan vi nesten førte til ingen strøm i husveggene og hva vi har gjort i ettertid for å bygge redundans og validering. Kan tilpasse foredraget etter behov mtp tid."
+        }
+      ]
+    },
+    {
+      "id": "slot_7",
+      "startTime": "13:25",
+      "endTime": "13:50",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess_t1_7",
+          "trackId": "track1",
+          "title": "Intro til OAuth 2.0",
+          "speaker": "Andreas Berger",
+          "description": "En gjennomgang av grunnleggende identitet og tilgangsstyring (IAM) \r\nmed fokus på OAuth – fra forskjellen mellom autentisering og autorisering \r\ntil en grundig forklaring av authorization code flow. \r\nSom gir utviklere, arkitekter, sikkerhetsfolk og andre et \r\nlettfattelig startpunkt for et ofte opplevd komplisert tema."
+        },
+        {
+          "id": "sess_t2_7",
+          "trackId": "track2",
+          "title": "Seeing Like an Organisation",
+          "speaker": "Emil Ramsvik",
+          "description": "Denne presentasjonen fokuserer på å forstå organisasjoner fra et sosiologisk perspektiv. Konsepter som leglibility, system thinking og chaos theory blir brukt til å gjøre et dypdykk i hvordan organisasjoner ender opp med å gjøre de mest absurde ting."
+        }
+      ]
+    },
+    {
+      "id": "slot_8",
+      "startTime": "13:50",
+      "endTime": "14:00",
+      "type": "break",
+      "sessions": [
+        {
+          "id": "sess_t1_8",
+          "trackId": "all",
+          "title": "PAUSE",
+          "speaker": "PAUSE",
+          "description": "PAUSE"
+        }
+      ]
+    },
+    {
+      "id": "slot_9",
+      "startTime": "14:00",
+      "endTime": "14:15",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess_t1_9",
+          "trackId": "track1",
+          "title": "Skalering og ytelse i skattelistene",
+          "speaker": "Ann-Sofie Ulle",
+          "description": "Hva er det som gjør det så raskt å søke i skattelistene?"
+        },
+        {
+          "id": "sess_t2_9",
+          "trackId": "track2",
+          "title": "Hersketeknikker, hva og hvordan",
+          "speaker": "Shomaila Kausar",
+          "description": "Hva er hersketeknikker, hvordan de brukes i arbeidslivet, og hvordan vi kan gjenkjenne og håndtere dem på en konstruktiv måte. Se på noen eksempler, vanlige situasjoner i jobbhverdagen, og prøve å gi konkrete tips til hvordan man kan stå imot og bidra til en mer respektfull kommunikasjon på arbeidsplassen.  Mål: Øke bevisstheten, styrke trygghet i kommunikasjon og bidra til et inkluderende arbeidsmiljø."
+        }
+      ]
+    },
+    {
+      "id": "slot_10",
+      "startTime": "14:15",
+      "endTime": "14:30",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess_t1_10",
+          "trackId": "track1",
+          "title": "Hjelp jeg har fått ansvar for infrastruktur",
+          "speaker": "Kim Hilton",
+          "description": "En personlig erfaring fra å gå fra fullstackutvikler med mest Java-backend og lite kjennskap til Kubernetes og Azure til å få ansvar for hele infrastrukturen i en overgang fra POC til produksjon, med refleksjoner som er relevante for utviklere som stadig oftere får ansvar for infra og CI/CD i tillegg til vanlig koding."
+        },
+        {
+          "id": "sess_t2_10",
+          "trackId": "track2",
+          "title": "Hvordan AI endrer måten vi tester på",
+          "speaker": "Inam Qadir",
+          "description": "Kort om hvordan testingen tradisjonelt har vært, hvordan overgangen til AI nå spiller en rolle mm"
+        }
+      ]
+    },
+    {
+      "id": "slot_11",
+      "startTime": "14:30",
+      "endTime": "14:45",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess_t1_11",
+          "trackId": "track1",
+          "title": "Playwright, KI og MCP",
+          "speaker": "Sindre Hagen",
+          "description": "En kort gjennomgang om hvordan gjøre Playwright automasjon med KI og MCP."
+        },
+        {
+          "id": "sess_t2_11",
+          "trackId": "track2",
+          "title": "Bias - hvordan hjernen vår lurer oss",
+          "speaker": "Knut Nymoen",
+          "description": "Forskjellige typer bias, hvilke valg vi kan gjøre som både er feil men også at vi tar valg. Hvordan vi unngår noe av det. Hvordan det brukes i markedsføring. Konferer gjerne med Cornelius om denne."
+        }
+      ]
+    },
+    {
+      "id": "slot_12",
+      "startTime": "14:45",
+      "endTime": "15:00",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess_t1_12",
+          "trackId": "track1",
+          "title": "Slik animerte vi sammenkoblinger",
+          "speaker": "Linda Andresen og Martin Gunnerud",
+          "description": "Demo av hva faggruppen for sammenkoblinger har laget. \r\nVi snakker litt om valg av teknologi, hvilke kompromisser vi måtte gjøre og hva vi har lyst til å få til videre!"
+        },
+        {
+          "id": "sess_t2_12",
+          "trackId": "track2",
+          "title": "Lag en app på 1-2-3 med Cursor",
+          "speaker": "Petr Dreisitl og Vegard Nyeng",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "slot_13",
+      "startTime": "15:00",
+      "endTime": "15:15",
+      "type": "break",
+      "sessions": [
+        {
+          "id": "sess_t1_13",
+          "trackId": "all",
+          "title": "PAUSE",
+          "speaker": "PAUSE",
+          "description": "PAUSE"
+        }
+      ]
+    },
+    {
+      "id": "slot_14",
+      "startTime": "15:15",
+      "endTime": "15:30",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess_t1_14",
+          "trackId": "track1",
+          "title": "Faggruppe: Kubernetes on Raspberry Pi",
+          "speaker": "Herman",
+          "description": "Hva faggruppa har vært gjennom og oppnådd"
+        },
+        {
+          "id": "sess_t2_14",
+          "trackId": "track2",
+          "title": "Analyse av brukeratferd",
+          "speaker": "Johan Haugland",
+          "description": "Analyse av brukeratferd er et sentralt verktøy i å optimalisere viktige metrikker som click through rate eller conversion rate, men mange vet ikke hvor enkelt det er å komme i gang med det. I dette foredraget viser jeg hvilke systemer man trenger, og hvordan man bruker dem i praksis.",
+          "rowSpan": 2
+        }
+      ]
+    },
+    {
+      "id": "slot_15",
+      "startTime": "15:30",
+      "endTime": "15:40",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess_t1_15",
+          "trackId": "track1",
+          "title": "0 til 100 av Mac Verktøy",
+          "speaker": "Emil Ramsvik",
+          "description": "Går igjennom forskjellige verktøy får å gjøre arbeidsdagen og hverdagslivet lettere. Presentasjon starter med enkle verktøy og jo lenger ut i presentasjonen jo mer komplekse og nerdete blir verktøyene."
+        }
+      ]
+    },
+    {
+      "id": "slot_16",
+      "startTime": "15:40",
+      "endTime": "16:05",
+      "type": "parallel",
+      "sessions": [
+        {
+          "id": "sess_t1_16",
+          "trackId": "track1",
+          "title": "Sikkerhetstesting i 2026",
+          "speaker": "Bendik Tiltnes",
+          "description": "\"Det dukker stadig opp nye verktøy for sikkerhetstesting som fungerer på ulike vis.  For å hjelpe deg navigere i dette landsskapet, forklarer jeg hvilke typer sikkerhetstest som er populære og hva de tester.\""
+        },
+        {
+          "id": "sess_t2_16",
+          "trackId": "track2",
+          "title": "Fra tegnebrettet til tenkepartner",
+          "speaker": "Tommy Madsen",
+          "description": "Refleksjon rundt hva verdien av designfaget egentlig er, og hvordan dette vil bli i tiden fremover."
+        }
+      ]
+    },
+    {
+      "id": "slot_17",
+      "startTime": "16:05",
+      "endTime": "16:30",
+      "type": "common",
+      "sessions": [
+        {
+          "id": "sess_t1_17",
+          "trackId": "all",
+          "title": "Paneldebatt om KI med forfriskninger",
           "speaker": "",
-          "description": "Buffet lunch served in the cafeteria."
+          "description": "Faggruppen \"Bokklubb\" er vertskap for en panelldebatt om KI"
+        }
+      ]
+    },
+    {
+      "id": "slot_18",
+      "startTime": "16:30",
+      "endTime": "17:30",
+      "type": "break",
+      "sessions": [
+        {
+          "id": "sess_t1_18",
+          "trackId": "all",
+          "title": "Middag",
+          "speaker": "",
+          "description": "Buffet fra kantina serveres på kontoret"
+        }
+      ]
+    },
+    {
+      "id": "slot_19",
+      "startTime": "17:00",
+      "endTime": "17:15",
+      "type": "common",
+      "sessions": [
+        {
+          "id": "sess_t1_19",
+          "trackId": "all",
+          "title": "Kveldsforedrag: Interaksjonskostnad 💃🕺",
+          "speaker": "Benjamin",
+          "description": "Hjernen vår bruker ca 20 watt energi. 24/7. Energi = Effekt * Tid. \r\nMed 20W ville treningen til GTP-3 tatt 7000-8000 år. Dette er en tidsmaskin"
         }
       ]
     }
   ],
-  "feedback": [
-    {
-      "id": "1767809407570",
-      "sessionId": "sess1",
-      "rating": 5,
-      "comment": "Great!",
-      "createdAt": "2026-01-07T18:10:07.570Z"
-    }
-  ]
+  "feedback": []
 }

@@ -28,6 +28,9 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # Initial data
 COPY --from=builder --chown=nextjs:nodejs /app/data ./data
 
+# Expose storage volume
+VOLUME ["/app/data"]
+
 USER nextjs
 
 EXPOSE 3001
