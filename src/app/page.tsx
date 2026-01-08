@@ -1,5 +1,5 @@
 import { getConferenceData } from "@/lib/store";
-import ScheduleView from "./components/ScheduleView";
+import HomeClient from "./components/HomeClient";
 
 export const dynamic = 'force-dynamic';
 
@@ -29,9 +29,7 @@ export default async function Home() {
         </div>
       </header>
 
-      <div className="flex-grow">
-        <ScheduleView data={data} />
-      </div>
+      <HomeClient data={data} />
 
       <footer className="bg-white border-t border-gray-200 py-12 mt-12">
         <div className="max-w-6xl mx-auto px-4 text-center text-text-muted text-sm flex flex-col items-center gap-4">

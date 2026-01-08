@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - HOSTNAME=0.0.0.0
+      - ADMIN_PASSWORD=systek
+    volumes:
+      - conference_data:/app/data
+    restart: always
+
+volumes:
+  conference_data:
