@@ -130,9 +130,9 @@
         {
           "id": "sess_t2_9",
           "trackId": "track2",
-          "title": "Hersketeknikker, hva og hvordan",
-          "speaker": "Shomaila Kausar",
-          "description": "Hva er hersketeknikker, hvordan de brukes i arbeidslivet, og hvordan vi kan gjenkjenne og håndtere dem på en konstruktiv måte. Se på noen eksempler, vanlige situasjoner i jobbhverdagen, og prøve å gi konkrete tips til hvordan man kan stå imot og bidra til en mer respektfull kommunikasjon på arbeidsplassen.  Mål: Øke bevisstheten, styrke trygghet i kommunikasjon og bidra til et inkluderende arbeidsmiljø."
+          "title": "Hvordan AI endrer måten vi tester på",
+          "speaker": "Inam Qadir",
+          "description": "Kort om hvordan testingen tradisjonelt har vært, hvordan overgangen til AI nå spiller en rolle mm"
         }
       ]
     },
@@ -152,9 +152,9 @@
         {
           "id": "sess_t2_10",
           "trackId": "track2",
-          "title": "Hvordan AI endrer måten vi tester på",
-          "speaker": "Inam Qadir",
-          "description": "Kort om hvordan testingen tradisjonelt har vært, hvordan overgangen til AI nå spiller en rolle mm"
+          "title": "Hersketeknikker, hva og hvordan",
+          "speaker": "Shomaila Kausar",
+          "description": "Hva er hersketeknikker, hvordan de brukes i arbeidslivet, og hvordan vi kan gjenkjenne og håndtere dem på en konstruktiv måte. Se på noen eksempler, vanlige situasjoner i jobbhverdagen, og prøve å gi konkrete tips til hvordan man kan stå imot og bidra til en mer respektfull kommunikasjon på arbeidsplassen.  Mål: Øke bevisstheten, styrke trygghet i kommunikasjon og bidra til et inkluderende arbeidsmiljø."
         }
       ]
     },
@@ -280,11 +280,26 @@
     {
       "id": "slot_17",
       "startTime": "16:05",
-      "endTime": "16:30",
+      "endTime": "16:15",
       "type": "common",
       "sessions": [
         {
           "id": "sess_t1_17",
+          "trackId": "all",
+          "title": "React2Shell - Hva skjedde egentlig?",
+          "speaker": "Mikael Solstad",
+          "description": "Mikael forklarer hva som skjedde med en av de mest kritiske sårbarhetene vi har sett de siste årene."
+        }
+      ]
+    },
+    {
+      "id": "slot_18",
+      "startTime": "16:05",
+      "endTime": "16:30",
+      "type": "common",
+      "sessions": [
+        {
+          "id": "sess_t1_18",
           "trackId": "all",
           "title": "Paneldebatt om KI med forfriskninger",
           "speaker": "",
@@ -293,13 +308,13 @@
       ]
     },
     {
-      "id": "slot_18",
+      "id": "slot_19",
       "startTime": "16:30",
       "endTime": "17:30",
       "type": "break",
       "sessions": [
         {
-          "id": "sess_t1_18",
+          "id": "sess_t1_19",
           "trackId": "all",
           "title": "Middag",
           "speaker": "",
@@ -308,13 +323,13 @@
       ]
     },
     {
-      "id": "slot_19",
+      "id": "slot_20",
       "startTime": "17:00",
       "endTime": "17:15",
       "type": "common",
       "sessions": [
         {
-          "id": "sess_t1_19",
+          "id": "sess_t1_20",
           "trackId": "all",
           "title": "Kveldsforedrag: Interaksjonskostnad 💃🕺",
           "speaker": "Benjamin",

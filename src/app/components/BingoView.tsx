@@ -7,7 +7,7 @@ import { saveBingoSquare, getBingoSquares, deleteBingoSquare } from '@/lib/bingo
 const BINGO_GRID = [
     // B col
     { text: 'Spiller eller har spilt Minecraft', col: 'B' },
-    { text: 'Svømte IKKE i sjøen i sommer', col: 'B' },
+    { text: 'Har badet i havet i 2026', col: 'B' },
     { text: 'Født i februar', col: 'B' },
     { text: 'Leser manga', col: 'B' },
     { text: 'Har en lillebror', col: 'B' },
@@ -15,12 +15,12 @@ const BINGO_GRID = [
     { text: 'Har en storesøster', col: 'I' },
     { text: 'Har brukket et bein', col: 'I' },
     { text: 'Trener på treningssenter', col: 'I' },
-    { text: 'Kan berører nesa med tunga', col: 'I' },
+    { text: 'Har holdt innlegg på Fagdagen', col: 'I' },
     { text: 'Har møtt en kjendis', col: 'I' },
     // N col
-    { text: 'Har en Tik Tok-konto', col: 'N' },
+    { text: 'Vært med i et NM', col: 'N' },
     { text: 'Kan spille et instrument', col: 'N' },
-    { text: 'Har besøkt USA', col: 'N' },
+    { text: 'Skal reise til USA i 2026', col: 'N' },
     { text: 'Spiller fotball', col: 'N' },
     { text: 'Liker sushi', col: 'N' },
     // G col
@@ -30,11 +30,11 @@ const BINGO_GRID = [
     { text: 'Har lappen på bil', col: 'G' },
     { text: 'Har krøllete hår', col: 'G' },
     // O col
-    { text: 'Liker klassisk musikk', col: 'O' },
-    { text: 'Er allergisk for en matvare', col: 'O' },
-    { text: 'Har vært ute i båt i sommer', col: 'O' },
-    { text: 'Favorittfarge er rød', col: 'O' },
-    { text: 'Kan snakke et annet språk enn norsk og engelsk', col: 'O' },
+    { text: 'Har tatovering', col: 'O' },
+    { text: 'Har tannlegeskrekk', col: 'O' },
+    { text: 'Har høydeskrekk', col: 'O' },
+    { text: 'Har drevet med ekstremsport', col: 'O' },
+    { text: 'Har jobbet i Systek i over 10 år', col: 'O' },
 ];
 
 // Re-order to 5x5 grid (rows first for rendering)
@@ -137,7 +137,7 @@ export default function BingoView() {
                             key={idx}
                             onClick={() => handleSquareClick(idx)}
                             className={`
-                relative flex flex-col items-center justify-center p-2 rounded-lg md:rounded-xl overflow-hidden
+                relative flex flex-col items-center justify-center p-1 md:p-3 rounded-lg md:rounded-xl overflow-hidden
                 transition-all duration-300 text-center border-2
                 ${hasPhoto
                                     ? 'border-primary bg-primary/5'
@@ -157,9 +157,9 @@ export default function BingoView() {
                                     </div>
                                 </div>
                             ) : (
-                                <div className="z-10 flex flex-col items-center justify-center gap-1">
-                                    <span className="text-[8px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">{square.col}</span>
-                                    <span className="text-[10px] md:text-[13px] leading-tight font-medium text-gray-700 break-words line-clamp-4">
+                                <div className="z-10 flex flex-col items-center justify-center gap-0.5 md:gap-1">
+                                    <span className="text-[7px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">{square.col}</span>
+                                    <span className="text-[8.5px] min-[375px]:text-[10px] min-[425px]:text-[11px] md:text-[14px] leading-[1.1] md:leading-tight font-medium text-gray-700 break-words line-clamp-4">
                                         {square.text}
                                     </span>
                                 </div>
