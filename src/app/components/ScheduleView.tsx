@@ -4,7 +4,7 @@ import { ConferenceData, Session, Slot, Track } from '@/lib/store';
 import { useState } from 'react';
 import FeedbackForm from './FeedbackForm';
 import { submitFeedbackAction } from '../actions';
-import { Clock, MessageSquare, MapPin, User, ChevronRight } from 'lucide-react';
+import { Clock, MessageSquare, MapPin, User, ChevronRight, Coffee, Utensils } from 'lucide-react';
 
 export default function ScheduleView({ data }: { data: ConferenceData }) {
     const [selectedSession, setSelectedSession] = useState<Session | null>(null);
@@ -57,40 +57,52 @@ export default function ScheduleView({ data }: { data: ConferenceData }) {
                     return (
                         <div key={slot.id} className="contents group">
                             {/* Time Column */}
-                            <div className={`
-                                flex flex-col items-center md:items-end gap-0
-                                text-xs md:text-sm font-bold text-text-muted whitespace-nowrap
-                                pt-2 md:pt-0
-                                ${isCommon ? 'col-span-3 flex-row justify-center md:mb-2 text-base md:text-lg w-full py-4' : ''}
-                            `}>
-                                {!isCommon ? (
-                                    <>
-                                        <span>{slot.startTime}</span>
-                                        <span className="md:hidden text-gray-300 transform rotate-90 w-px h-2 bg-gray-300 my-0.5"></span>
-                                        <span className="hidden md:inline text-gray-300 mx-1">-</span>
-                                        <span className="text-gray-400 font-normal">{slot.endTime}</span>
-                                    </>
-                                ) : (
-                                    <>
-                                        <Clock className="mr-2 text-primary" size={isBreak ? 20 : 16} />
-                                        <span>{slot.startTime} - {slot.endTime}</span>
-                                    </>
-                                )}
+                            <div
+                                className="flex flex-col items-center md:items-end gap-0 text-xs md:text-sm font-bold text-text-muted whitespace-nowrap pt-2 md:pt-4"
+                                style={{ gridColumn: '1' }}
+                            >
+                                <span>{slot.startTime}</span>
+                                <span className="md:hidden text-gray-300 transform rotate-90 w-px h-2 bg-gray-300 my-0.5"></span>
+                                <span className="hidden md:inline text-gray-300 mx-1">-</span>
+                                <span className="text-gray-400 font-normal">{slot.endTime}</span>
+                                {(isCommon || isBreak) && <Clock className="mt-2 text-primary hidden md:block" size={16} />}
                             </div>
 
-                            {/* Common Session (Full Width) */}
-                            {isCommon && commonSession && (
+                            {/* Common Session (Full Width spanning tracks) */}
+                            {(isCommon || isBreak) && commonSession && (
                                 <div
                                     className={`
-                                        col-span-3 
-                                        ${isBreak ? 'bg-primary/5 border border-primary/10 p-3 md:p-4 text-center' : 'bg-white shadow-sm border border-gray-100 card-hover p-4 md:p-8 text-center border-l-4 border-l-primary'}
-                                        rounded-xl md:rounded-2xl
+                                        col-span-2 
+                                        ${isBreak
+                                            ? 'bg-gray-100/80 border border-gray-200 py-3 md:py-6 text-center'
+                                            : 'bg-white shadow-sm border border-gray-100 card-hover p-4 md:p-8 text-center border-l-4 border-l-primary'
+                                        }
+                                        rounded-xl md:rounded-2xl relative overflow-hidden
                                     `}
+                                    style={{ gridColumn: '2 / span 2' }}
                                 >
-                                    <div className="space-y-2">
-                                        <h3 className={`font-bold text-gray-900 ${isBreak ? 'text-lg text-primary-dark' : 'text-xl md:text-2xl'}`}>
-                                            {commonSession.title}
-                                        </h3>
+                                    {isBreak && (
+                                        <div className="absolute top-1/2 left-4 -translate-y-1/2 opacity-10 pointer-events-none">
+                                            {commonSession.title.toUpperCase().includes('MIDDAG') || commonSession.title.toUpperCase().includes('LUNSJ')
+                                                ? <Utensils size={48} />
+                                                : <Coffee size={40} />
+                                            }
+                                        </div>
+                                    )}
+                                    <div className="space-y-1 md:space-y-2">
+                                        <div className="flex items-center justify-center gap-2">
+                                            {isBreak && (
+                                                <span className="text-text-muted">
+                                                    {commonSession.title.toUpperCase().includes('MIDDAG') || commonSession.title.toUpperCase().includes('LUNSJ')
+                                                        ? <Utensils size={18} />
+                                                        : <Coffee size={18} />
+                                                    }
+                                                </span>
+                                            )}
+                                            <h3 className={`font-bold text-gray-900 ${isBreak ? 'text-base md:text-lg text-gray-600' : 'text-xl md:text-2xl'}`}>
+                                                {commonSession.title}
+                                            </h3>
+                                        </div>
                                         {commonSession.speaker && (
                                             <div className="flex items-center justify-center gap-2 text-text-muted">
                                                 {!isBreak && <User size={18} className="text-primary" />}
@@ -98,7 +110,7 @@ export default function ScheduleView({ data }: { data: ConferenceData }) {
                                             </div>
                                         )}
                                         {commonSession.description && (
-                                            <p className="text-gray-500 text-sm max-w-prose mx-auto">{commonSession.description}</p>
+                                            <p className="text-gray-500 text-sm max-w-prose mx-auto italic">{commonSession.description}</p>
                                         )}
                                         {!isBreak && (
                                             <div className="pt-4 flex justify-center">
