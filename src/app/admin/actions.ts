@@ -22,22 +22,22 @@ export async function parseCSVAction(formData: FormData): Promise<{ success: boo
     }
 
     try {
-        const fs = require('fs');
-        fs.writeFileSync('debug.log', `[${new Date().toISOString()}] parseCSVAction started\n`, { flag: 'a' });
+        // fs.writeFileSync('debug.log', `[${new Date().toISOString()}] parseCSVAction started\n`, { flag: 'a' });
+        console.log(`[${new Date().toISOString()}] parseCSVAction started`);
 
         const text = await file.text();
-        fs.writeFileSync('debug.log', `[${new Date().toISOString()}] Text read. Length: ${text.length}\n`, { flag: 'a' });
+        console.log(`[${new Date().toISOString()}] Text read. Length: ${text.length}`);
 
         const rows = parseCSVInternal(text);
-        fs.writeFileSync('debug.log', `[${new Date().toISOString()}] Rows parsed: ${rows.length}\n`, { flag: 'a' });
+        console.log(`[${new Date().toISOString()}] Rows parsed: ${rows.length}`);
 
         const slots = processRowsToSlots(rows);
-        fs.writeFileSync('debug.log', `[${new Date().toISOString()}] Slots processed: ${slots.length}\n`, { flag: 'a' });
+        console.log(`[${new Date().toISOString()}] Slots processed: ${slots.length}`);
 
         return { success: true, slots };
     } catch (error: any) {
         console.error('Error parsing CSV:', error);
-        require('fs').writeFileSync('debug.log', `[${new Date().toISOString()}] Error: ${error.message}\n${error.stack}\n`, { flag: 'a' });
+        console.error(`[${new Date().toISOString()}] Error: ${error.message}\n${error.stack}`);
         return { success: false, error: error.message || 'Failed to parse CSV' };
     }
 }
