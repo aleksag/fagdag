@@ -59,6 +59,9 @@ export default function AdminDashboard({ data }: { data: ConferenceData }) {
                             <button onClick={createNewSlot} className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-md hover:opacity-90">
                                 <Plus size={16} /> Legg til slot
                             </button>
+                            <a href="/admin/import" className="ml-2 flex items-center gap-2 bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50">
+                                Import CSV
+                            </a>
                         </div>
 
                         {editingSlot && (

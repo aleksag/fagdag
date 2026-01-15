@@ -66,7 +66,7 @@
           "trackId": "track1",
           "title": "Ta kontroll over KI",
           "speaker": "Cecilie Haugstvedt",
-          "description": "Slik gjør vi KI til en produktiv kollega: med konkrete tips, \r\nvaner og rutiner for trygg og kvalitetsfremmende bruk av KI i teamet, s\r\nom hjelper utviklere, testere og forretning å samarbeide bedre og unngå vanlige fallgruver"
+          "description": "Slik gjør vi KI til en produktiv kollega: med konkrete tips, \nvaner og rutiner for trygg og kvalitetsfremmende bruk av KI i teamet, s\nom hjelper utviklere, testere og forretning å samarbeide bedre og unngå vanlige fallgruver"
         },
         {
           "id": "sess_t2_6",
@@ -88,7 +88,7 @@
           "trackId": "track1",
           "title": "Intro til OAuth 2.0",
           "speaker": "Andreas Berger",
-          "description": "En gjennomgang av grunnleggende identitet og tilgangsstyring (IAM) \r\nmed fokus på OAuth – fra forskjellen mellom autentisering og autorisering \r\ntil en grundig forklaring av authorization code flow. \r\nSom gir utviklere, arkitekter, sikkerhetsfolk og andre et \r\nlettfattelig startpunkt for et ofte opplevd komplisert tema."
+          "description": "En gjennomgang av grunnleggende identitet og tilgangsstyring (IAM) \nmed fokus på OAuth – fra forskjellen mellom autentisering og autorisering \ntil en grundig forklaring av authorization code flow. \nSom gir utviklere, arkitekter, sikkerhetsfolk og andre et \nlettfattelig startpunkt for et ofte opplevd komplisert tema."
         },
         {
           "id": "sess_t2_7",
@@ -147,7 +147,7 @@
           "trackId": "track1",
           "title": "Hjelp jeg har fått ansvar for infrastruktur",
           "speaker": "Kim Hilton",
-          "description": "En personlig erfaring fra å gå fra fullstackutvikler med mest Java-backend og lite kjennskap til Kubernetes og Azure til å få ansvar for hele infrastrukturen i en overgang fra POC til produksjon, med refleksjoner som er relevante for utviklere som stadig oftere får ansvar for infra og CI/CD i tillegg til vanlig koding."
+          "description": "Kim deler erfaringer fra North Star-prosjektet hos Norsk Hydro og reisen fra POC-stadiet til å nesten komme seg til prod."
         },
         {
           "id": "sess_t2_10",
@@ -189,9 +189,9 @@
         {
           "id": "sess_t1_12",
           "trackId": "track1",
-          "title": "Slik animerte vi sammenkoblinger",
+          "title": "Animasjonsverktøy for Systek",
           "speaker": "Linda Andresen og Martin Gunnerud",
-          "description": "Demo av hva faggruppen for sammenkoblinger har laget. \r\nVi snakker litt om valg av teknologi, hvilke kompromisser vi måtte gjøre og hva vi har lyst til å få til videre!"
+          "description": "Demo av hva faggruppen for sammenkoblinger har laget. \nVi snakker litt om valg av teknologi, hvilke kompromisser vi måtte gjøre og hva vi har lyst til å få til videre!"
         },
         {
           "id": "sess_t2_12",
@@ -286,9 +286,9 @@
         {
           "id": "sess_t1_17",
           "trackId": "all",
-          "title": "React2Shell - Hva skjedde egentlig?",
+          "title": "React, men med sudo",
           "speaker": "Mikael Solstad",
-          "description": "Mikael forklarer hva som skjedde med en av de mest kritiske sårbarhetene vi har sett de siste årene."
+          "description": "Mikael forklarer hva som skjedde med en av de mest kritiske sårbarhetene vi har sett de siste årene. Hvilke konsekvenser det kan få om du fortsatt (!?) ikke har patchet, samt en forklaring og demo av angrepet."
         }
       ]
     },
@@ -333,7 +333,7 @@
           "trackId": "all",
           "title": "Kveldsforedrag: Interaksjonskostnad 💃🕺",
           "speaker": "Benjamin",
-          "description": "Hjernen vår bruker ca 20 watt energi. 24/7. Energi = Effekt * Tid. \r\nMed 20W ville treningen til GTP-3 tatt 7000-8000 år. Dette er en tidsmaskin"
+          "description": "Hjernen vår bruker ca 20 watt energi. 24/7. Energi = Effekt * Tid. \nMed 20W ville treningen til GTP-3 tatt 7000-8000 år. Dette er en tidsmaskin"
         }
       ]
     }

@@ -6,7 +6,12 @@ export const config = {
 
 export function middleware(req: NextRequest) {
     const basicAuth = req.headers.get('authorization');
-    const url = req.nextUrl;
+    const cookieAuth = req.cookies.get('admin_session');
+
+    // Check if we have a valid session cookie
+    if (cookieAuth?.value === 'authenticated') {
+        return NextResponse.next();
+    }
 
     if (basicAuth) {
         const authValue = basicAuth.split(' ')[1];
@@ -16,7 +21,16 @@ export function middleware(req: NextRequest) {
         const validPassword = process.env.ADMIN_PASSWORD || 'systek';
 
         if (user === 'admin' && pwd === validPassword) {
-            return NextResponse.next();
+            const response = NextResponse.next();
+            // Set a session cookie that expires in 1 day
+            response.cookies.set('admin_session', 'authenticated', {
+                path: '/',
+                maxAge: 86400,
+                sameSite: 'strict',
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production'
+            });
+            return response;
         }
     }
 
