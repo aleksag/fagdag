@@ -159,7 +159,7 @@ export default function BingoView() {
                             ) : (
                                 <div className="z-10 flex flex-col items-center justify-center gap-0.5 md:gap-1">
                                     <span className="text-[7px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">{square.col}</span>
-                                    <span className="text-[8.5px] min-[375px]:text-[10px] min-[425px]:text-[11px] md:text-[14px] leading-[1.1] md:leading-tight font-medium text-gray-700 break-words line-clamp-4">
+                                    <span className="text-[8.5px] min-[375px]:text-[10px] min-[425px]:text-[11px] md:text-[14px] leading-[1.1] md:leading-tight font-medium text-gray-700 break-words hyphens-auto line-clamp-4">
                                         {square.text}
                                     </span>
                                 </div>
