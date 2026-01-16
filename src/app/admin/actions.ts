@@ -59,6 +59,43 @@ export async function saveScheduleAction(slots: Slot[]): Promise<{ success: bool
     }
 }
 
+export async function shiftScheduleAction(minutes: number): Promise<{ success: boolean; error?: string }> {
+    try {
+        const data: ConferenceData = await getConferenceData();
+        const updatedSlots = data.slots.map(slot => {
+            return {
+                ...slot,
+                startTime: shiftTime(slot.startTime, minutes),
+                endTime: shiftTime(slot.endTime, minutes)
+            };
+        });
+
+        const newData: ConferenceData = {
+            ...data,
+            slots: updatedSlots
+        };
+        await saveConferenceData(newData);
+        revalidatePath('/');
+        revalidatePath('/admin');
+        return { success: true };
+    } catch (error: any) {
+        return { success: false, error: error.message || 'Failed to shift schedule' };
+    }
+}
+
+function shiftTime(time: string, minutesToAdd: number): string {
+    const [hours, mins] = time.split(':').map(Number);
+    const totalMinutes = (hours * 60) + mins + minutesToAdd;
+
+    // Handle day wrap (optional but good to have)
+    const normalizedMinutes = (totalMinutes % (24 * 60) + (24 * 60)) % (24 * 60);
+
+    const newHours = Math.floor(normalizedMinutes / 60);
+    const newMins = normalizedMinutes % 60;
+
+    return `${newHours.toString().padStart(2, '0')}:${newMins.toString().padStart(2, '0')}`;
+}
+
 // --- Helper Functions (Ported from import-csv.js) ---
 
 function parseCSVInternal(text: string): string[][] {

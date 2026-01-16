@@ -2,9 +2,52 @@
 
 import { ConferenceData, Slot, Session } from '@/lib/store';
 import { useState } from 'react';
-import { saveSlotAction, deleteSlotAction } from '../actions';
-import { Edit2, Trash2, Plus, Star } from 'lucide-react';
+import { saveSlotAction, deleteSlotAction, shiftScheduleAction } from '../actions';
+import { Edit2, Trash2, Plus, Star, Clock } from 'lucide-react';
 import FormattedDate from '../../components/FormattedDate';
+
+function ScheduleShifter() {
+    const [minutes, setMinutes] = useState('15');
+    const [loading, setLoading] = useState(false);
+
+    const handleShift = async () => {
+        const mins = parseInt(minutes);
+        if (isNaN(mins) || mins === 0) return;
+
+        if (!confirm(`Er du sikker på at du vil forskyve hele programmet med ${mins} minutter?`)) return;
+
+        setLoading(true);
+        await shiftScheduleAction(mins);
+        setLoading(false);
+        alert('Programmet er forskjøvet');
+    };
+
+    return (
+        <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 flex items-center gap-4">
+            <Clock className="text-blue-600" size={20} />
+            <div className="flex-1">
+                <h3 className="font-semibold text-blue-900">Forskyv programmet</h3>
+                <p className="text-xs text-blue-700">Legg til eller trekk fra minutter på alle tider.</p>
+            </div>
+            <div className="flex items-center gap-2">
+                <input
+                    type="number"
+                    value={minutes}
+                    onChange={(e) => setMinutes(e.target.value)}
+                    className="w-20 p-2 border rounded text-right"
+                    placeholder="Min"
+                />
+                <button
+                    onClick={handleShift}
+                    disabled={loading}
+                    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+                >
+                    {loading ? '...' : 'Forskyv'}
+                </button>
+            </div>
+        </div>
+    );
+}
 
 export default function AdminDashboard({ data }: { data: ConferenceData }) {
     const [activeTab, setActiveTab] = useState<'schedule' | 'feedback'>('schedule');
@@ -63,6 +106,7 @@ export default function AdminDashboard({ data }: { data: ConferenceData }) {
                                 Import CSV
                             </a>
                         </div>
+                        <ScheduleShifter />
 
                         {editingSlot && (
                             <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
