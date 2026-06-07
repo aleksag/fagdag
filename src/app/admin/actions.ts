@@ -167,7 +167,7 @@ function processRowsToSlots(rows: string[][]): Slot[] {
         const t1Time = parts[1]?.trim();
         if (!t1Time) continue;
 
-        const timeMatch = t1Time.match(/(\d{1,2}:\d{2})\s*[-:]\s*(\d{1,2}:\d{2})/);
+        const timeMatch = t1Time.match(/(\d{1,2}:\d{2})\s*[-–—:]\s*(\d{1,2}:\d{2})/);
         if (!timeMatch) continue;
 
         const startTime = timeMatch[1].padStart(5, '0');
@@ -209,7 +209,7 @@ function processRowsToSlots(rows: string[][]): Slot[] {
         } else if (t2Title) {
             let rowSpan = 1;
             if (t2Time) {
-                const t2Match = t2Time.match(/(\d{1,2}:\d{2})\s*[-:]\s*(\d{1,2}:\d{2})/);
+                const t2Match = t2Time.match(/(\d{1,2}:\d{2})\s*[-–—:]\s*(\d{1,2}:\d{2})/);
                 if (t2Match) {
                     const t2Start = parseTime(t2Match[1]);
                     const t2End = parseTime(t2Match[2]);
@@ -222,7 +222,7 @@ function processRowsToSlots(rows: string[][]): Slot[] {
                                 const nextRow = rows[nextRowIdx];
                                 const nTime = nextRow[1]?.trim();
                                 if (!nTime) break;
-                                const nMatch = nTime.match(/(\d{1,2}:\d{2})\s*[-:]\s*(\d{1,2}:\d{2})/);
+                                const nMatch = nTime.match(/(\d{1,2}:\d{2})\s*[-–—:]\s*(\d{1,2}:\d{2})/);
                                 if (nMatch) {
                                     const nStart = parseTime(nMatch[1]);
                                     const nEnd = parseTime(nMatch[2]);

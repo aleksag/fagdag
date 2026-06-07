@@ -1,5 +1,6 @@
 import { getConferenceData } from "@/lib/store";
 import HomeClient from "./components/HomeClient";
+import LogoTapDetector from "./components/LogoTapDetector";
 
 export const dynamic = 'force-dynamic';
 
@@ -12,7 +13,7 @@ export default async function Home() {
       <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center">
-            <img src="/systek-logo.svg" alt="Systek Logo" className="h-8 w-auto" />
+            <LogoTapDetector />
           </div>
 
           <div className="text-sm font-medium text-text-muted hidden sm:block">

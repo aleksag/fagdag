@@ -4,10 +4,11 @@ import { useState } from 'react';
 import { ConferenceData } from "@/lib/store";
 import ScheduleView from "./ScheduleView";
 import BingoView from "./BingoView";
-import { Calendar, Grid3X3, Users } from 'lucide-react';
+import BuzzwordBingoView from "./BuzzwordBingoView";
+import { Calendar, Users, Hash } from 'lucide-react';
 
 export default function HomeClient({ data }: { data: ConferenceData }) {
-    const [activeTab, setActiveTab] = useState<'program' | 'bingo'>('program');
+    const [activeTab, setActiveTab] = useState<'program' | 'buzzword'>('program');
 
     return (
         <>
@@ -28,17 +29,17 @@ export default function HomeClient({ data }: { data: ConferenceData }) {
                         <span>Program</span>
                     </button>
                     <button
-                        onClick={() => setActiveTab('bingo')}
+                        onClick={() => setActiveTab('buzzword')}
                         className={`
               flex-1 py-4 flex items-center justify-center gap-2 border-b-2 transition-all duration-300
-              ${activeTab === 'bingo'
+              ${activeTab === 'buzzword'
                                 ? 'border-primary text-primary-dark font-bold'
                                 : 'border-transparent text-text-muted hover:text-gray-900 font-medium'
                             }
             `}
                     >
-                        <Users size={18} />
-                        <span>BINGO</span>
+                        <Hash size={18} />
+                        <span>Buzzword</span>
                     </button>
                 </div>
             </div>
@@ -47,7 +48,7 @@ export default function HomeClient({ data }: { data: ConferenceData }) {
                 {activeTab === 'program' ? (
                     <ScheduleView data={data} />
                 ) : (
-                    <BingoView />
+                    <BuzzwordBingoView slots={data.slots} />
                 )}
             </div>
         </>
