@@ -48,6 +48,7 @@ export default function DoomOverlay({ onClose }: Props) {
             if (stopped || !containerRef.current || !window.Dos) return;
             ciRef.current = await window.Dos(containerRef.current, {
                 url: '/doom.jsdos',
+                pathPrefix: '/js-dos/emulators/',
                 emulatorsUrl: '/js-dos/emulators/',
                 autoStart: true,
             });
